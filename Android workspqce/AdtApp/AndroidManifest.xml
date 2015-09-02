@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.adtapp.TextViewATY"></activity>
+        <activity android:name="com.example.adtapp.TextViewShowPic"></activity>
     </application>
 
 </manifest>
