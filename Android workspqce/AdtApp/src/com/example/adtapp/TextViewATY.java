@@ -15,6 +15,7 @@ public class TextViewATY extends Activity {
 		setContentView(R.layout.my_layout);
 		textView = (TextView) findViewById(R.id.tv);
 		String htmlString = "<font color='blue'>it's just a try </font>";
+		htmlString+="<br/><a href='http://www.baidu.com'>百度一下 你就知道</a>";
 		CharSequence charSequence = Html.fromHtml(htmlString);
 		textView.setText(charSequence);
 	}
