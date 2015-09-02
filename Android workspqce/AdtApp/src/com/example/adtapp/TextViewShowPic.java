@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class TextViewShowPic extends Activity {
 	private TextView textView;
+	private TextView textView2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,27 +18,48 @@ public class TextViewShowPic extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.my_layout2);
 		InitTextViewByHtmlString();
-
+		InitTextView2();
 	}
 
 	private void InitTextViewByHtmlString() {
 		textView = (TextView) findViewById(R.id.tv);
 
 		String htmlString = "CCè <img src='pic01'>";
-//		int a=getResourceID("pic01");
-//		textView.setText(a);
-		CharSequence charSequence = Html.fromHtml(htmlString,new ImageGetter() {
-			
-			@Override
-			public Drawable getDrawable(String arg0) {
-				// TODO Auto-generated method stub
-				Drawable drawable=getResources().getDrawable(getResourceID(arg0));
-				drawable.setBounds(0	, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-				return drawable;
-			}
-		},null);
+		CharSequence charSequence = Html.fromHtml(htmlString,
+				new ImageGetter() {
+
+					@Override
+					public Drawable getDrawable(String arg0) {
+						// TODO Auto-generated method stub
+						Drawable drawable = getResources().getDrawable(
+								getResourceID(arg0));
+						drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),
+								drawable.getIntrinsicHeight());
+						return drawable;
+					}
+				}, null);
 		textView.setText(charSequence);
-		textView.setMovementMethod(LinkMovementMethod.getInstance());
+	}
+
+	private void InitTextView2() {
+		textView2 = (TextView) findViewById(R.id.tv2);
+
+		String htmlString = "CCè Сһ�� <img src='pic01'>";
+		CharSequence charSequence = Html.fromHtml(htmlString,
+				new ImageGetter() {
+
+					@Override
+					public Drawable getDrawable(String arg0) {
+						// TODO Auto-generated method stub
+						Drawable drawable = getResources().getDrawable(
+								getResourceID(arg0));
+						drawable.setBounds(0, 0,
+								drawable.getIntrinsicWidth() / 2,
+								drawable.getIntrinsicHeight() / 2);
+						return drawable;
+					}
+				}, null);
+		textView2.setText(charSequence);
 	}
 
 	private int getResourceID(String arg) {
