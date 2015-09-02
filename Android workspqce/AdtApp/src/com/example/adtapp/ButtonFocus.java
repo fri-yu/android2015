@@ -1,5 +1,6 @@
 package com.example.adtapp;
 
+import android.R.integer;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnKeyListener;
@@ -17,6 +18,8 @@ public class ButtonFocus extends Activity implements OnClickListener,
 	private Button buttonDefult;
 	private Button buttonImg;
 	int flag = 1;
+	private int imgWidth;
+	private int imgHeight;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +31,13 @@ public class ButtonFocus extends Activity implements OnClickListener,
 	}
 
 	private void Init() {
+		System.out.println("init run");
 		buttonDefult = (Button) findViewById(R.id.btn1);
 		buttonImg = (Button) findViewById(R.id.btn2);
+		
+		imgWidth=buttonImg.getWidth();
+		imgHeight=buttonImg.getHeight();
+		
 		buttonDefult.setOnClickListener(this);
 
 		buttonImg.setOnClickListener(this);
@@ -46,7 +54,10 @@ public class ButtonFocus extends Activity implements OnClickListener,
 
 	@Override
 	public void onFocusChange(View arg0, boolean arg1) {
+		System.out.println("focus change");
 		// TODO Auto-generated method stub
+		buttonImg.setWidth(imgWidth+(arg1?1:-1)*50);
+		buttonImg.setHeight(imgHeight+(arg1?1:-1)*40);
 
 	}
 
@@ -57,20 +68,32 @@ public class ButtonFocus extends Activity implements OnClickListener,
 	}
 
 	@Override
-	public void onClick(View arg0) {
+	public void onClick(View v) {
 		// TODO Auto-generated method stub
-
-		if (flag == 1
-				&& buttonDefult.getWidth() == getWindowManager()
-						.getDefaultDisplay().getWidth()) {
-			flag = -1;
-		} else if (flag == -1 && buttonDefult.getWidth() < 150) {
-			flag = 1;
+		switch (v.getId()) {
+		case R.id.btn1: {
+			if (flag == 1
+					&& buttonDefult.getWidth() == getWindowManager()
+							.getDefaultDisplay().getWidth()) {
+				flag = -1;
+				buttonImg.setFocusable(true);
+				buttonImg.setFocusableInTouchMode(true);
+				buttonImg.requestFocus();
+				buttonImg.requestFocusFromTouch();
+			} else if (flag == -1 && buttonDefult.getWidth() < 150) {
+				flag = 1;
+			}
+			buttonDefult.setWidth(buttonDefult.getWidth()
+					+ (int) (flag * buttonDefult.getWidth() * 0.1));
+			buttonDefult.setHeight(buttonDefult.getHeight()
+					+ (int) (flag * buttonDefult.getHeight() * 0.1));
 		}
-		buttonDefult.setWidth(buttonDefult.getWidth()
-				+ (int) (flag * buttonDefult.getWidth() * 0.1));
-		buttonDefult.setHeight(buttonDefult.getHeight()
-				+ (int) (flag * buttonDefult.getHeight() * 0.1));
+			break;
+		case R.id.btn2:
+			
+			
+			break;
+		}
 
 	}
 }
