@@ -20,15 +20,19 @@ import com.example.http.JsonUtil;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private static final String TAG = "MyActivity";
 	private Button internetButton;
+	private Button btn_start_new_aty;
+	private TextView textView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_main);
 		System.out.println("onCreate Run");
 		internetButton = (Button) findViewById(R.id.btnInternet);
+		btn_start_new_aty = (Button) findViewById(R.id.btn_start_new_aty);
+		textView = (TextView) findViewById(R.id.textView1);
 		internetButton.setOnClickListener(this);
+		btn_start_new_aty.setOnClickListener(this);
 		// internetButton.setOnClickListener(new OnClickListener() {
 		//
 		// @Override
@@ -151,8 +158,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		int eventId = v.getId();
 		switch (eventId) {
 		case R.id.btnInternet:
-			Intent intent = new Intent(MainActivity.this, TextViewATY.class);
-			startActivity(intent);
+			textView.setText("Internet BTN clicked");
+		case R.id.btn_start_new_aty:
+			Intent intent_new_aty = new Intent(MainActivity.this,
+					TextViewATY.class);
+			startActivity(intent_new_aty);
 		}
 
 	}
