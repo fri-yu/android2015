@@ -13,4 +13,5 @@
     <string name="btn_start_aty_WBJY">文本校验</string>
     <string name="btn_start_aty_ZDTC">自动填充</string>
     <string name="btn_start_aty_BTNFocus">按钮焦点</string>
+    <string name="btn_start_aty_radiobtn">单选框</string>
 </resources>

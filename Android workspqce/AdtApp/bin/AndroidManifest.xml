@@ -32,6 +32,7 @@
         <activity android:name="com.example.adtapp.WenbenJiaoyan" />
         <activity android:name="com.example.adtapp.AutoComplete" />
         <activity android:name="com.example.adtapp.ButtonFocus" />
+        <activity android:name="com.example.adtapp.RadioButton" />
     </application>
 
 </manifest>

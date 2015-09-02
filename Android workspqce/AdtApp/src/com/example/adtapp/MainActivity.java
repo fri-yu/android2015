@@ -39,7 +39,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btn_start_aty_WBJY;
 	private Button btn_start_aty_ZDTC;
 	private Button btn_start_aty_BTNFocus;
-
+	private Button btn_start_aty_radiobtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,6 +53,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_WBJY = (Button) findViewById(R.id.btn_start_aty_WBJY);
 		btn_start_aty_ZDTC = (Button) findViewById(R.id.btn_start_aty_ZDTC);
 		btn_start_aty_BTNFocus = (Button) findViewById(R.id.btn_start_aty_BTNFocus);
+		btn_start_aty_radiobtn= (Button) findViewById(R.id.btn_start_aty_radiobtn);
+				
 
 		internetButton.setOnClickListener(this);
 		btn_start_new_aty.setOnClickListener(this);
@@ -62,6 +64,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_WBJY.setOnClickListener(this);
 		btn_start_aty_ZDTC.setOnClickListener(this);
 		btn_start_aty_BTNFocus.setOnClickListener(this);
+		btn_start_aty_radiobtn.setOnClickListener(this);
+		
 
 		textView = (TextView) findViewById(R.id.textView1);
 	}
@@ -118,8 +122,14 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(btn_start_aty_BTNFocus);
 			break;
 
+		case R.id.btn_start_aty_radiobtn:
+			Intent btn_start_aty_radiobtn = new Intent(MainActivity.this,
+					RadioButton.class);
+			startActivity(btn_start_aty_radiobtn);
+			break;
+			
 		}
-
+		
 	}
 
 }
