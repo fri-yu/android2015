@@ -20,30 +20,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/BtnInternet" />
+
     <Button
         android:id="@+id/btn_start_new_aty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_start_new_aty" />
+
     <Button
         android:id="@+id/btn_start_pic_aty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_start_pic_aty" />
- <Button
+
+    <Button
         android:id="@+id/btn_start_aty_fromtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_start_aty_fromtext" />
- <Button
+
+    <Button
         android:id="@+id/btn_start_aty_PMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_start_aty_PMD" />
+
     <Button
         android:id="@+id/btn_start_aty_WBJY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_start_aty_WBJY" />
-    
+
+    <Button
+        android:id="@+id/btn_start_aty_ZDTC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start_aty_ZDTC" />
+
 </LinearLayout>

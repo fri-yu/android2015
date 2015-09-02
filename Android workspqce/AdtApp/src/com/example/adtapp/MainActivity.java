@@ -37,7 +37,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btn_start_aty_fromtext;
 	private Button btn_start_aty_PMD;
 	private Button btn_start_aty_WBJY;
-	@Override
+	private Button btn_start_aty_ZDTC;
+	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -48,6 +49,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_fromtext = (Button) findViewById(R.id.btn_start_aty_fromtext);
 		btn_start_aty_PMD = (Button) findViewById(R.id.btn_start_aty_PMD);
 		btn_start_aty_WBJY = (Button) findViewById(R.id.btn_start_aty_WBJY);
+		btn_start_aty_ZDTC = (Button) findViewById(R.id.btn_start_aty_ZDTC);
 		
 		internetButton.setOnClickListener(this);
 		btn_start_new_aty.setOnClickListener(this);
@@ -55,6 +57,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_fromtext.setOnClickListener(this);
 		btn_start_aty_PMD.setOnClickListener(this);
 		btn_start_aty_WBJY.setOnClickListener(this);
+		btn_start_aty_ZDTC.setOnClickListener(this);
 		
 		
 		textView = (TextView) findViewById(R.id.textView1);
@@ -94,6 +97,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent btn_start_aty_WBJY = new Intent(MainActivity.this,
 					WenbenJiaoyan.class);
 			startActivity(btn_start_aty_WBJY);
+		case R.id.btn_start_aty_ZDTC:
+			Intent btn_start_aty_ZDTC = new Intent(MainActivity.this,
+					AutoComplete.class);
+			startActivity(btn_start_aty_ZDTC);	
+			
 		}
 
 	}
