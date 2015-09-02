@@ -38,7 +38,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btn_start_aty_PMD;
 	private Button btn_start_aty_WBJY;
 	private Button btn_start_aty_ZDTC;
-	@Override 
+	private Button btn_start_aty_BTNFocus;
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -50,7 +52,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_PMD = (Button) findViewById(R.id.btn_start_aty_PMD);
 		btn_start_aty_WBJY = (Button) findViewById(R.id.btn_start_aty_WBJY);
 		btn_start_aty_ZDTC = (Button) findViewById(R.id.btn_start_aty_ZDTC);
-		
+		btn_start_aty_BTNFocus = (Button) findViewById(R.id.btn_start_aty_BTNFocus);
+
 		internetButton.setOnClickListener(this);
 		btn_start_new_aty.setOnClickListener(this);
 		btn_start_pic_aty.setOnClickListener(this);
@@ -58,8 +61,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_PMD.setOnClickListener(this);
 		btn_start_aty_WBJY.setOnClickListener(this);
 		btn_start_aty_ZDTC.setOnClickListener(this);
-		
-		
+		btn_start_aty_BTNFocus.setOnClickListener(this);
+
 		textView = (TextView) findViewById(R.id.textView1);
 	}
 
@@ -77,31 +80,44 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch (eventId) {
 		case R.id.btnInternet:
 			textView.setText("Internet BTN clicked");
+			break;
 		case R.id.btn_start_new_aty:
 			Intent intent_new_aty = new Intent(MainActivity.this,
 					TextViewATY.class);
 			startActivity(intent_new_aty);
+			break;
 		case R.id.btn_start_pic_aty:
 			Intent intent_pic_aty = new Intent(MainActivity.this,
 					TextViewShowPic.class);
 			startActivity(intent_pic_aty);
+			break;
 		case R.id.btn_start_aty_fromtext:
 			Intent btn_start_aty_fromtext = new Intent(MainActivity.this,
 					StartATYFromText.class);
 			startActivity(btn_start_aty_fromtext);
+			break;
 		case R.id.btn_start_aty_PMD:
 			Intent btn_start_aty_PMD = new Intent(MainActivity.this,
 					PaoMaDeng.class);
 			startActivity(btn_start_aty_PMD);
+			break;
 		case R.id.btn_start_aty_WBJY:
 			Intent btn_start_aty_WBJY = new Intent(MainActivity.this,
 					WenbenJiaoyan.class);
 			startActivity(btn_start_aty_WBJY);
+			break;
 		case R.id.btn_start_aty_ZDTC:
 			Intent btn_start_aty_ZDTC = new Intent(MainActivity.this,
 					AutoComplete.class);
-			startActivity(btn_start_aty_ZDTC);	
-			
+			startActivity(btn_start_aty_ZDTC);
+			break;
+
+		case R.id.btn_start_aty_BTNFocus:
+			Intent btn_start_aty_BTNFocus = new Intent(MainActivity.this,
+					ButtonFocus.class);
+			startActivity(btn_start_aty_BTNFocus);
+			break;
+
 		}
 
 	}
