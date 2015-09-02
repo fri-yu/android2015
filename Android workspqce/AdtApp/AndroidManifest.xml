@@ -27,6 +27,7 @@
         </activity>
         <activity android:name="com.example.adtapp.TextViewATY"></activity>
         <activity android:name="com.example.adtapp.TextViewShowPic"></activity>
+          <activity android:name="com.example.adtapp.StartATYFromText"></activity>
     </application>
 
 </manifest>

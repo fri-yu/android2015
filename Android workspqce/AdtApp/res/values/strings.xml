@@ -8,5 +8,6 @@
     <string name="tvdefault"> 默认值，什么都没给</string>
     <string name="btn_start_new_aty">启动另一个activity</string>
     <string name="btn_start_pic_aty">启动带图片的aty</string>
+    <string name="btn_start_aty_fromtext">这个ATY可以从text启动另一个ATY</string>
 
 </resources>

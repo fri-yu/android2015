@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btn_start_new_aty;
 	private TextView textView;
 	private Button btn_start_pic_aty;
-
+	private Button btn_start_aty_fromtext;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,9 +43,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		internetButton = (Button) findViewById(R.id.btnInternet);
 		btn_start_new_aty = (Button) findViewById(R.id.btn_start_new_aty);
 		btn_start_pic_aty = (Button) findViewById(R.id.btn_start_pic_aty);
+		btn_start_aty_fromtext = (Button) findViewById(R.id.btn_start_aty_fromtext);
+		
+		
+		
 		internetButton.setOnClickListener(this);
 		btn_start_new_aty.setOnClickListener(this);
 		btn_start_pic_aty.setOnClickListener(this);
+		btn_start_aty_fromtext.setOnClickListener(this);
 
 		textView = (TextView) findViewById(R.id.textView1);
 	}
@@ -72,6 +77,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent intent_pic_aty = new Intent(MainActivity.this,
 					TextViewShowPic.class);
 			startActivity(intent_pic_aty);
+		case R.id.btn_start_aty_fromtext:
+			Intent btn_start_aty_fromtext = new Intent(MainActivity.this,
+					StartATYFromText.class);
+			startActivity(btn_start_aty_fromtext);
 		}
 
 	}
