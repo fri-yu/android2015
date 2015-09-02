@@ -7,10 +7,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="你的选择是？" />
+        android:text="你的选择是？" 
+        
+        android:id="@+id/textview"/>
 
     <RadioGroup  android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" android:id="@+id/radiog">
 
         <RadioButton
             android:layout_width="wrap_content"
