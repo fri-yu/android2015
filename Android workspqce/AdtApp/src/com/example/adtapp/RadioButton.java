@@ -34,7 +34,7 @@ public class RadioButton extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				int a = radiog.getCheckedRadioButtonId();
+				int a = radiog.getCheckedRadioButtonId();//若找不到被选择的radioButton，则返回-1
 				if (a != -1) {
 					// TODO Auto-generated method stub
 					android.widget.RadioButton rButton = (android.widget.RadioButton) findViewById(a);
