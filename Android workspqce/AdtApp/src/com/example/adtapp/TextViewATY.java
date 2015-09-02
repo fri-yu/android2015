@@ -10,6 +10,7 @@ public class TextViewATY extends Activity {
 	private TextView textView;
 	private TextView textView2;
 	private TextView textViewemail;
+	private TextView tvphone;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class TextViewATY extends Activity {
 		InitTextViewByHtmlString();
 		InitTextViewByString();
 		InitTextViewEmail();
+		InitTextViewPhone();
 	}
 
 	private void InitTextViewByHtmlString() {
@@ -46,6 +48,15 @@ public class TextViewATY extends Activity {
 				+ "邮箱可以了 157726738@qq.com";
 		textViewemail.setText(string);
 		textViewemail.setMovementMethod(LinkMovementMethod.getInstance());
+
+	}
+
+	private void InitTextViewPhone() {
+		tvphone = (TextView) findViewById(R.id.tvphone);
+		String string = "连接不起作用了 http://www.baidu.com\n"
+				+ "邮箱也不可以 157726738@qq.com \n" + "号码保存到本地： 13033897611";
+		tvphone.setText(string);
+		tvphone.setMovementMethod(LinkMovementMethod.getInstance());
 
 	}
 }
