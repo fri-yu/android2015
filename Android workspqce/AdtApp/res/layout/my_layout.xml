@@ -12,6 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="@string/tvdefault" />
+        <TextView
+        android:id="@+id/tvweb"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/tvdefault"
+        android:autoLink="web" />
+             <TextView
+        android:id="@+id/tvemail"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/tvdefault"
+        android:autoLink="email" />
    <TextView
         android:id="@+id/myconsole"
         android:layout_width="fill_parent"
