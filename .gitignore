@@ -1,2 +1,5 @@
 *.class
 Android workspqce/AdtApp/bin/classes.dex
+*.class
+*.class
+Android workspqce/AdtApp/bin/classes/com/example/adtapp/R$string.class
