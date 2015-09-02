@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AdtApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="BtnInternet">Internet</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
