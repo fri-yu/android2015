@@ -25,26 +25,27 @@ public final class R {
         public static final int pic01=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080013;
+        public static final int action_settings=0x7f080014;
         public static final int auto=0x7f080008;
         public static final int btnInternet=0x7f080001;
-        public static final int btnWBJY=0x7f080012;
+        public static final int btnWBJY=0x7f080013;
         public static final int btn_start_aty_PMD=0x7f080005;
         public static final int btn_start_aty_WBJY=0x7f080006;
         public static final int btn_start_aty_ZDTC=0x7f080007;
         public static final int btn_start_aty_fromtext=0x7f080004;
         public static final int btn_start_new_aty=0x7f080002;
         public static final int btn_start_pic_aty=0x7f080003;
-        public static final int et1=0x7f080010;
-        public static final int myconsole=0x7f08000d;
+        public static final int et1=0x7f080011;
+        public static final int multiauto=0x7f080009;
+        public static final int myconsole=0x7f08000e;
         public static final int textView1=0x7f080000;
-        public static final int tv=0x7f080009;
-        public static final int tv2=0x7f08000e;
-        public static final int tvemail=0x7f08000b;
-        public static final int tvnumber=0x7f08000f;
-        public static final int tvphone=0x7f08000c;
-        public static final int tvweb=0x7f08000a;
-        public static final int tvzimu=0x7f080011;
+        public static final int tv=0x7f08000a;
+        public static final int tv2=0x7f08000f;
+        public static final int tvemail=0x7f08000c;
+        public static final int tvnumber=0x7f080010;
+        public static final int tvphone=0x7f08000d;
+        public static final int tvweb=0x7f08000b;
+        public static final int tvzimu=0x7f080012;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

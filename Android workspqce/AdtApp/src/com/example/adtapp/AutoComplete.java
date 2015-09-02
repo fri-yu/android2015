@@ -15,13 +15,13 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 
 public class AutoComplete extends Activity {
 	private AutoCompleteTextView auto;
-
-	private Button btnWBJY;
-
+	private MultiAutoCompleteTextView multiauto;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -39,5 +39,8 @@ public class AutoComplete extends Activity {
 				AutoComplete.this, android.R.layout.simple_dropdown_item_1line,
 				arrStrings);
 		auto.setAdapter(adapter);
+		multiauto=(MultiAutoCompleteTextView)findViewById(R.id.multiauto);
+		multiauto.setAdapter(adapter);
+		multiauto.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 	}
 }
