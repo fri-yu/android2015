@@ -10,5 +10,5 @@
     <string name="btn_start_pic_aty">启动带图片的aty</string>
     <string name="btn_start_aty_fromtext">使用text启动另一个ATY</string>
     <string name="btn_start_aty_PMD">跑马灯</string>
-
+ <string name="btn_start_aty_WBJY">文本校验</string>
 </resources>

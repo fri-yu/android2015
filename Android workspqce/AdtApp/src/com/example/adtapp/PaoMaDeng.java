@@ -25,8 +25,5 @@ public class PaoMaDeng extends Activity {
 	private void InitTextViewByHtmlString() {
 		textView = (TextView) findViewById(R.id.tv);
 
-		String string = "跑马灯~再来一遍~马灯~再来一遍";//字的长度得够长才能跑马
-		textView.setText(string);
-		textView.setMovementMethod(LinkMovementMethod.getInstance());//加上这句，文字可以拖动
 	}
 }

@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btn_start_pic_aty;
 	private Button btn_start_aty_fromtext;
 	private Button btn_start_aty_PMD;
-
+	private Button btn_start_aty_WBJY;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,13 +47,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_pic_aty = (Button) findViewById(R.id.btn_start_pic_aty);
 		btn_start_aty_fromtext = (Button) findViewById(R.id.btn_start_aty_fromtext);
 		btn_start_aty_PMD = (Button) findViewById(R.id.btn_start_aty_PMD);
-
+		btn_start_aty_WBJY = (Button) findViewById(R.id.btn_start_aty_WBJY);
+		
 		internetButton.setOnClickListener(this);
 		btn_start_new_aty.setOnClickListener(this);
 		btn_start_pic_aty.setOnClickListener(this);
 		btn_start_aty_fromtext.setOnClickListener(this);
 		btn_start_aty_PMD.setOnClickListener(this);
-
+		btn_start_aty_WBJY.setOnClickListener(this);
+		
+		
 		textView = (TextView) findViewById(R.id.textView1);
 	}
 
@@ -87,6 +90,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent btn_start_aty_PMD = new Intent(MainActivity.this,
 					PaoMaDeng.class);
 			startActivity(btn_start_aty_PMD);
+		case R.id.btn_start_aty_WBJY:
+			Intent btn_start_aty_WBJY = new Intent(MainActivity.this,
+					WenbenJiaoyan.class);
+			startActivity(btn_start_aty_WBJY);
 		}
 
 	}

@@ -25,14 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.adtapp.TextViewATY" >
-        </activity>
-        <activity android:name="com.example.adtapp.TextViewShowPic" >
-        </activity>
-        <activity android:name="com.example.adtapp.StartATYFromText" >
-        </activity>
-        <activity android:name="com.example.adtapp.PaoMaDeng" >
-        </activity>
+        <activity android:name="com.example.adtapp.TextViewATY" />
+        <activity android:name="com.example.adtapp.TextViewShowPic" />
+        <activity android:name="com.example.adtapp.StartATYFromText" />
+        <activity android:name="com.example.adtapp.PaoMaDeng" />
+        <activity android:name="com.example.adtapp.WenbenJiaoyan" />
     </application>
 
 </manifest>
