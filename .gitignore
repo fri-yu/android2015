@@ -6,3 +6,4 @@ Android workspqce/AdtApp/bin/classes/com/example/adtapp/R$string.class
 *.class
 Android workspqce/AdtApp/bin/classes.dex
 *.ap_
+*.class
