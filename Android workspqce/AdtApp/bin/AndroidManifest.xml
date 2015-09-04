@@ -26,13 +26,13 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.adtapp.TextViewATY" />
-        <activity android:name="com.example.adtapp.TextViewShowPic" />
+        <activity android:name="TextViewShowPic" />
         <activity android:name="com.example.adtapp.StartATYFromText" />
         <activity android:name="com.example.adtapp.PaoMaDeng" />
         <activity android:name="com.example.adtapp.WenbenJiaoyan" />
         <activity android:name="com.example.adtapp.AutoComplete" />
         <activity android:name="com.example.adtapp.ButtonFocus" />
-        <activity android:name="com.example.adtapp.RadioButton" />
+        <activity android:name="RadioButton" />
     </application>
 
 </manifest>
