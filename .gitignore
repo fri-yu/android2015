@@ -13,3 +13,5 @@ Android workspqce/AdtApp/bin/classes.dex
 *.ap_
 Android workspqce/AdtApp/bin/AdtApp.apk
 *.apk
+Android workspqce/AdtApp/bin/classes.dex
+*.apk
