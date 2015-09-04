@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_start_aty_ZDTC.setOnClickListener(this);
 		btn_start_aty_BTNFocus.setOnClickListener(this);
 		btn_start_aty_radiobtn.setOnClickListener(this);
-		
+		findViewById(R.id.btn_start_aty_linerLayout).setOnClickListener(this);
 
 		textView = (TextView) findViewById(R.id.textView1);
 	}
@@ -127,7 +127,10 @@ public class MainActivity extends Activity implements OnClickListener {
 					RadioButton.class);
 			startActivity(btn_start_aty_radiobtn);
 			break;
-			
+		case R.id.btn_start_aty_linerLayout:
+			Intent btn_start_aty_linerLayout = new Intent(MainActivity.this,
+					AppLayoutWeight.class);
+			startActivity(btn_start_aty_linerLayout);
 		}
 		
 	}

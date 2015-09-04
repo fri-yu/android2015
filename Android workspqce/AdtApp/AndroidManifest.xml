@@ -33,6 +33,7 @@
         <activity android:name="com.example.adtapp.AutoComplete" />
         <activity android:name="com.example.adtapp.ButtonFocus" />
         <activity android:name="RadioButton" />
+        <activity android:name="AppLayoutWeight" />
     </application>
 
 </manifest>
