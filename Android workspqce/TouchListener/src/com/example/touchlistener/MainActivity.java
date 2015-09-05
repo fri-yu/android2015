@@ -34,7 +34,8 @@ public class MainActivity extends Activity {
 				default:
 					break;
 				}
-				return false;
+				// return false;
+				return true;// 这里返回true才会把事件往后走
 			}
 		});
 	}
