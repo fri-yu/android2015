@@ -15,3 +15,5 @@ Android workspqce/AdtApp/bin/AdtApp.apk
 *.apk
 Android workspqce/AdtApp/bin/classes.dex
 *.apk
+*.dex
+/Android workspqce/AppCalculator/bin
