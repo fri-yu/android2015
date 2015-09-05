@@ -21,11 +21,20 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <intent-filter>
+                </intent-filter>
             </intent-filter>
         </activity>
-        <activity android:name="com.example.adtapp.TextViewATY" />
+        <activity android:name="com.example.adtapp.TextViewATY" >
+            <intent-filter><!--没什么卵用，貌似只识别第一个声明  -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <intent-filter>
+                </intent-filter>
+            </intent-filter>
+        </activity>
         <activity android:name="TextViewShowPic" />
         <activity android:name="com.example.adtapp.StartATYFromText" />
         <activity android:name="com.example.adtapp.PaoMaDeng" />
