@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.appcalculator.CalculatorArg.Option;
+import com.example.appcalculator.R.string;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -14,7 +15,11 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private TextView tv;
+	private String currentNumber;
 	List<CalculatorArg> argList = new ArrayList<CalculatorArg>();
+	float[] args = new float[] { 0, 0, 0 };
+	private boolean flagClickedOP = false;
+	private boolean flagNewTypein = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,82 +53,167 @@ public class MainActivity extends Activity implements OnClickListener {
 		findViewById(R.id.btnDiv).setOnClickListener(this);
 		findViewById(R.id.btnResult).setOnClickListener(this);
 		findViewById(R.id.btnClear).setOnClickListener(this);
-
 	}
 
 	@Override
 	public void onClick(View v) {
+		currentNumber = tv.getText().toString();
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btn0:
 			// System.out.println(tv.getText());
-			tv.setText(0 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 0 + "");
+			} else {
+				tv.setText(0 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn1:
-			tv.setText(1 + "");
-			AddArgAndGetResult();
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 1 + "");
+			} else {
+				tv.setText(1 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn2:
-			tv.setText(2 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 2 + "");
+			} else {
+				tv.setText(2 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn3:
-			tv.setText(3 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 3 + "");
+			} else {
+				tv.setText(3 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn4:
-			tv.setText(4 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 4 + "");
+			} else {
+				tv.setText(4 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn5:
-			tv.setText(5 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 5 + "");
+			} else {
+				tv.setText(5 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn6:
-			tv.setText(6 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 6 + "");
+			} else {
+				tv.setText(6 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn7:
-			tv.setText(7 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 7 + "");
+			} else {
+				tv.setText(7 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn8:
-			tv.setText(8 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 8 + "");
+			} else {
+				tv.setText(8 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btn9:
-			tv.setText(9 + "");
+			if (!flagClickedOP) {
+				tv.setText(currentNumber + 9 + "");
+			} else {
+				tv.setText(9 + "");
+				flagClickedOP = false;
+			}
 			break;
 		case R.id.btnAdd:
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			argList.add(new CalculatorArg(0, Option.ADD));
-			AddArgAndGetResult();
+			if (currentNumber != "")
+				args[1] = (float) Double.parseDouble(currentNumber);
+			args[2] = OptionArg.ADD;
+			flagClickedOP = true;
+			flagNewTypein = true;
+			AddArgAndGetResult(OptionArg.ADD);
 			break;
 		case R.id.btnSub:
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			argList.add(new CalculatorArg(0, Option.SUB));
-			AddArgAndGetResult();
+			if (currentNumber != "")
+				args[1] = (float) Double.parseDouble(currentNumber);
+			args[2] = OptionArg.SUB;
+			flagClickedOP = true;
+			flagNewTypein = true;
+			AddArgAndGetResult(OptionArg.SUB);
 			break;
 		case R.id.btnX:
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			argList.add(new CalculatorArg(0, Option.X));
-			AddArgAndGetResult();
+			if (currentNumber != "")
+				args[1] = (float) Double.parseDouble(currentNumber);
+			args[2] = OptionArg.X;
+			flagClickedOP = true;
+			flagNewTypein = true;
+			AddArgAndGetResult(OptionArg.X);
 			break;
 		case R.id.btnDiv:
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			argList.add(new CalculatorArg(0, Option.DIV));
-			AddArgAndGetResult();
+			if (currentNumber != "")
+				args[1] = (float) Double.parseDouble(currentNumber);
+			args[2] = OptionArg.DIV;
+			flagClickedOP = true;
+			flagNewTypein = true;
+			AddArgAndGetResult(OptionArg.DIV);
 			break;
 		case R.id.btnResult:
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			argList.add(new CalculatorArg((float) Double.parseDouble(tv
-					.getText().toString()), null));
-			AddArgAndGetResult();
+			args[1] = (float) Double.parseDouble(currentNumber);
+			if (!flagNewTypein) {
+				args[2] = OptionArg.RESULT;
+				flagNewTypein = false;
+			}
+			AddArgAndGetResult(OptionArg.RESULT);
+			break;
+		case R.id.btnClear:
+			args[1] = args[0] = 0;
+			tv.setText("");
 			break;
 		}
 
 	}
 
-	private void AddArgAndGetResult() {
-		Option string = CalculatorArg.Option.ADD;
+	private void AddArgAndGetResult(int optionArg) {
+		// Option string = CalculatorArg.Option.ADD;
+		switch (optionArg) {
+		case OptionArg.ADD:
+			args[0] += args[1];
+			tv.setText(args[0] + "");
+			break;
+		case OptionArg.SUB:
+			args[0] -= args[1];
+			tv.setText(args[0] + "");
+			break;
+		case OptionArg.X:
+			args[0] *= args[1];
+			tv.setText(args[0] + "");
+			break;
+		case OptionArg.DIV:
+			args[0] /= args[1];
+			tv.setText(args[0] + "");
+			break;
+		case OptionArg.RESULT:
+			if (args[2] != OptionArg.RESULT) {
+				AddArgAndGetResult((int) args[2]);
+			}
+			break;
+		}
 
 	}
 }
