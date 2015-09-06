@@ -2,15 +2,12 @@ package com.example.touchlistener;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.provider.ContactsContract.CommonDataKinds.Event;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.widget.FrameLayout;
 
 public class MainActivity extends Activity {
-	private FrameLayout fLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +43,4 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }
